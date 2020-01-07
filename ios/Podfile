@@ -36,6 +36,8 @@ target 'colorDiary' do
 
   pod 'react-native-splash-screen', :path => '../node_modules/react-native-splash-screen'
 
+  pod 'RNKakaoLogins', :path => '../node_modules/react-native-kakao-logins'
+
   target 'colorDiaryTests' do
     inherit! :search_paths
     # Pods for testing

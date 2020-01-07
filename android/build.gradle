@@ -36,3 +36,17 @@ allprojects {
         maven { url 'https://jitpack.io' }
     }
 }
+
+// kakao
+subprojects {
+    repositories {
+        mavenCentral()
+        maven { url 'http://devrepo.kakao.com:8088/nexus/content/groups/public/' }
+    }
+
+    dependencies {
+        // 카카오 로그인 sdk를 사용하기 위해 필요.
+        implementation group: 'com.kakao.sdk', name: 'usermgmt', version: project.KAKAO_SDK_VERSION
+        implementation project(':react-native-seoul-kakao-login')
+    }
+}
